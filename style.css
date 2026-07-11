@@ -24,6 +24,29 @@ body.home main {
     flex-direction: row;
 }
 
+.left,
+.right {
+    flex: 1;
+}
+
+main:has(.left):has(.right) {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+@media (max-width: 800px) {
+    main:has(.left):has(.right) {
+        flex-direction: column;
+    }
+}
+
+main h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: poppins, sans-serif;
+}
+
 .item {
     display: flex;
     flex-direction: column;
@@ -43,4 +66,13 @@ body.home main {
     font-weight: bold;
     font-size: 1em;
     color: #333;
+}
+
+footer {
+    background-color: #f4e1d2;
+    padding: 10px;
+    border-top: 5px solid #a82e1d;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia', serif;
 }
